@@ -113,8 +113,8 @@ export default function Dashboard() {
 </section>
 
 
-{/* ===================  Quick Actions ==========================*/}
-<section className="mb-8">
+{/* ====  Quick Actions ====*/}
+{/* <section className="mb-8">
   <h2 className="text-lg font-semibold text-[#4B2E39] mb-4">
     Quick Actions
   </h2>
@@ -135,10 +135,10 @@ export default function Dashboard() {
       </button>
     ))}
   </div>
-</section>
+</section> */}
 
-{/* ============================  Recent Orders  ======================= */}
-<section className="bg-white rounded-2xl p-6 shadow-sm">
+{/* ===  Recent Orders  ==== */}
+{/* <section className="bg-white rounded-2xl p-6 shadow-sm">
   <h2 className="text-lg font-semibold mb-4 text-[#4B2E39]">
     Recent Orders
   </h2>
@@ -154,7 +154,7 @@ export default function Dashboard() {
         </tr>
       </thead>
 
-      <tbody>
+      <tbody className="text-black">
         {[
           { id: "#1001", name: "Ravi", amt: "₹450", status: "Pending" },
           { id: "#1002", name: "Anita", amt: "₹1,200", status: "Completed" },
@@ -181,7 +181,7 @@ export default function Dashboard() {
       </tbody>
     </table>
   </div>
-</section>
+</section> */}
 
 
 

@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import Sidebar from "../../components/admin/sidebar";
 import Topbar from "../../components/admin/Topbar";
 import { Plus, Pencil, Trash2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Cakes() {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
+
+  const navigate = useNavigate();
 
 
   const handleDelete = (cakeName) => {
@@ -72,11 +76,14 @@ export default function Cakes() {
             <h1 className="text-2xl font-semibold text-[#4B2E39]">
               Cakes
             </h1>
+<button
+  onClick={() => navigate("/admin/cakes/add")}
+  className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-4 py-2 rounded-full font-medium"
+>
+  <Plus size={18} />
+  Add New Cake
+</button>
 
-            <button className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-4 py-2 rounded-full font-medium">
-              <Plus size={18} />
-              Add New Cake
-            </button>
           </div>
 
           {/*------------ Table Card ------------------*/}
