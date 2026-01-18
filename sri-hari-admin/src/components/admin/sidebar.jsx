@@ -52,7 +52,7 @@ export default function Sidebar({ open, setOpen }) {
         <nav className="flex-1 px-3 py-4 space-y-2">
           <MenuItem to="/admin/dashboard" icon={LayoutDashboard} text="Dashboard" onClick={closeSidebar} />
           <MenuItem to="/admin/cakes" icon={Package} text="Cakes" onClick={closeSidebar} />
-          <MenuItem to="/admin/superCategory" icon={ShoppingCart} text="Super Category" onClick={closeSidebar} />
+          <MenuItem to="/admin/super-category" icon={ShoppingCart} text="Super Category" onClick={closeSidebar} />
           <MenuItem to="/admin/category" icon={BarChart3} text="Category" onClick={closeSidebar} />
         </nav>
 
