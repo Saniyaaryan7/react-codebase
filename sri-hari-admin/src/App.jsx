@@ -1,8 +1,8 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminLogin from "./Pages/admin/AdminLogin";
 import Dashboard from "./Pages/admin/Dashboard";
-import Cakes from "./Pages/admin/Cakes";
-import AddCake from "./Pages/admin/AddCake";
+import Cakes from "./Pages/admin/Cake/Cakes";
+import AddCake from "./Pages/admin/Cake/AddCake";
 import SuperCategory from "./Pages/admin/SuperCategory/superCategory";
 import AddSuperCategory from "./Pages/admin/SuperCategory/AddSuperCategory";
 import Category from "./Pages/admin/Category/category";
