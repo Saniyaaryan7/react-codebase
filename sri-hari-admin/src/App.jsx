@@ -5,6 +5,8 @@ import Cakes from "./Pages/admin/Cakes";
 import AddCake from "./Pages/admin/AddCake";
 import SuperCategory from "./Pages/admin/SuperCategory/superCategory";
 import AddSuperCategory from "./Pages/admin/SuperCategory/AddSuperCategory";
+import Category from "./Pages/admin/Category/category";
+import AddCategory from "./Pages/admin/Category/AddCategory";
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
       <Route path="/admin/cakes/add" element={<AddCake />} />
       <Route path="/admin/super-category" element={<SuperCategory />} />
     <Route path="/admin/add-super-category" element={<AddSuperCategory />} />
+    <Route path="/admin/category" element={<Category />} />
+<Route path="/admin/add-category" element={<AddCategory />} />
+
     </Routes>
     </BrowserRouter>
   );
