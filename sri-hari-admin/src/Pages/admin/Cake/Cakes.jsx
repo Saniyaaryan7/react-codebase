@@ -155,15 +155,16 @@ export default function Cakes() {
     
     {/* =================================  Edit  =========================== */}
     <button
-      type="button"
-      className="bg-transparent p-1 rounded-full
-                 text-emerald-500 hover:text-emerald-700
-                 hover:bg-emerald-50
-                 focus:outline-none focus:ring-0"
-      title="Edit"
-    >
-      <Pencil size={18} />
-    </button>
+  type="button"
+  title="Edit"
+  onClick={() => navigate(`/admin/cakes/edit/${cake.id}`)}
+  className="bg-transparent p-1 rounded-full
+             text-emerald-500 hover:text-emerald-700
+             hover:bg-emerald-50"
+>
+  <Pencil size={18} />
+</button>
+
 
     {/* ================================ Delete =========================================*/}
     <button
