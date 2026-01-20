@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {
-  LayoutDashboard,
-  Package,
-  ShoppingCart,
-  BarChart3,
+   LayoutGrid,   
+  Cake,        
+  Layers,      
+  BarChart2,    
   LogOut,
   X,
 } from "lucide-react";
@@ -50,10 +50,10 @@ export default function Sidebar({ open, setOpen }) {
 
         {/*  Menu */}
         <nav className="flex-1 px-3 py-4 space-y-2">
-          <MenuItem to="/admin/dashboard" icon={LayoutDashboard} text="Dashboard" onClick={closeSidebar} />
-          <MenuItem to="/admin/cakes" icon={Package} text="Cakes" onClick={closeSidebar} />
-          <MenuItem to="/admin/super-category" icon={ShoppingCart} text="Super Category" onClick={closeSidebar} />
-          <MenuItem to="/admin/category" icon={BarChart3} text="Category" onClick={closeSidebar} />
+          <MenuItem to="/admin/dashboard" icon={LayoutGrid} text="Dashboard" onClick={closeSidebar} />
+          <MenuItem to="/admin/cakes" icon={Cake} text="Cakes" onClick={closeSidebar} />
+          <MenuItem to="/admin/super-category" icon={Layers} text="Super Category" onClick={closeSidebar} />
+          <MenuItem to="/admin/category" icon={BarChart2} text="Category" onClick={closeSidebar} />
         </nav>
 
         {/*  Logout */}

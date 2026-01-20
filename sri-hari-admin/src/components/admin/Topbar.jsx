@@ -1,12 +1,11 @@
 import React from "react";
-import { Menu } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import hamburger from "../../assets/Icons/Hamburger.svg"; 
 
 export default function Topbar({ toggle }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Dashboard par back button nahi dikhana
   const showBack = location.pathname !== "/admin/dashboard";
 
   return (
@@ -18,27 +17,14 @@ export default function Topbar({ toggle }) {
         {/* Mobile menu */}
         <button
           onClick={toggle}
-          className="md:hidden text-[#1F4E5F]"
+          className="md:hidden bg-transparent p-0 border-none"
         >
-          <Menu size={24} />
+          <img
+            src={hamburger}
+            alt="menu"
+            className="w-6 h-6"
+          />
         </button>
-
-        {/* CIRCULAR BACK BUTTON */}
-        {showBack && (
-          <div
-            onClick={() => navigate(-1)}
-            className="flex flex-col items-center cursor-pointer group"
-          >
-            <div
-              className="w-8 h-8 rounded-full hover:border border-gray-400
-                         flex items-center justify-center
-                         bg-gray-100 transition"
-            >
-              <span className="text-base font-semibold leading-none  mb-1">&lt;</span>
-            </div>
-           
-          </div>
-        )}
 
         <h2 className="text-lg sm:text-xl font-semibold text-[#4B2E39]">
           Admin Dashboard

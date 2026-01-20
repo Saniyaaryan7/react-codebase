@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
 import Sidebar from "../../../components/admin/sidebar";
 import Topbar from "../../../components/admin/Topbar";
-import { ArrowLeft } from "lucide-react";
+
 
 
 export default function EditCake() {
-  const { id } = useParams();
-  const navigate = useNavigate();
+ 
   const [open, setOpen] = useState(false);
 
   const [fileName, setFileName] = useState("No file chosen");
