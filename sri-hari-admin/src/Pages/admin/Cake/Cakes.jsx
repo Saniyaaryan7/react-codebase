@@ -25,7 +25,7 @@ export default function Cakes() {
       name: "Butter Scotch 1 Pond",
       price: 768,
       strike: 876,
-      img: "https://i.imgur.com/8Km9tLL.jpg",
+      img: "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlydGhkYXklMjBjYWtlfGVufDB8fDB8fHww",
       status: "Active",
     },
     {
@@ -34,7 +34,7 @@ export default function Cakes() {
       name: "Kitkat and Gems cake",
       price: 599,
       strike: 699,
-      img: "https://i.imgur.com/9z3sK6F.jpg",
+      img: "https://ukraineflora.com/upload/products/115/cake-happy-birthday.jpeg",
       status: "Active",
     },
     {
@@ -43,7 +43,7 @@ export default function Cakes() {
       name: "Butter stoch",
       price: 400,
       strike: 350,
-      img: "https://i.imgur.com/1bX5QH6.jpg",
+      img: "https://tse1.mm.bing.net/th/id/OIP.RTaO4UwkN9yE-AnLyHsLwwHaHa?cb=defcache2defcache=1&w=500&h=500&rs=1&pid=ImgDetMain&o=7&rm=3",
       status: "InActive",
     },
     {
@@ -52,7 +52,7 @@ export default function Cakes() {
       name: "Choco",
       price: 250,
       strike: 200,
-      img: "https://i.imgur.com/jTqNa1x.jpg",
+      img: "https://tse1.mm.bing.net/th/id/OIP.tqyhr3Sva1luYASQYoGGhgAAAA?cb=defcache2defcache=1&w=360&h=360&rs=1&pid=ImgDetMain&o=7&rm=3",
       status: "InActive",
     },
   ];
@@ -96,7 +96,7 @@ export default function Cakes() {
                 placeholder="Search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F4E5F]"
+                className="border rounded-lg px-4 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1F4E5F]"
               />
             </div>
 

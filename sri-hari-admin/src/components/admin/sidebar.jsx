@@ -30,12 +30,6 @@ export default function Sidebar({ open, setOpen }) {
   ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
 >
 
-        {/*  Mobile Close Button */}
-        <div className="md:hidden flex justify-end p-4">
-          <button onClick={closeSidebar}>
-            <X size={24} />
-          </button>
-        </div>
 
         {/*  Profile */}
         <div className="px-6 pt-8 pb-6 flex flex-col items-center border-b border-white/20">

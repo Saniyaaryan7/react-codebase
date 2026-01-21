@@ -22,19 +22,19 @@ export default function SuperCategory() {
     {
       id: 1,
       name: "Cakes",
-      image: "https://i.imgur.com/8Km9tLL.jpg",
+      image: "https://tse1.mm.bing.net/th/id/OIP.tqyhr3Sva1luYASQYoGGhgAAAA?cb=defcache2defcache=1&w=360&h=360&rs=1&pid=ImgDetMain&o=7&rm=3",
       status: "Active",
     },
     {
       id: 2,
       name: "Chocolate",
-      image: "https://i.imgur.com/9z3sK6F.jpg",
+      image: "https://th.bing.com/th/id/OIP.ih8kZFQOqdSxr8bs5aWf_gHaEL?w=325&h=183&c=7&r=0&o=7&cb=defcache2&dpr=1.5&pid=1.7&rm=3&defcache=1",
       status: "Active",
     },
     {
       id: 3,
       name: "Happy Birthday",
-      image: "https://i.imgur.com/1bX5QH6.jpg",
+      image: "https://i.pinimg.com/originals/68/8c/34/688c34749c505ac8afaae9ea95ca70b1.jpg",
       status: "Active",
     },
   ];
@@ -76,7 +76,7 @@ export default function SuperCategory() {
                 placeholder="Search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="border rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-[#1F4E5F] focus:outline-none"
+                className="border rounded-lg px-4 py-2 text-sm bg-white focus:ring-2 focus:ring-[#1F4E5F] focus:outline-none"
               />
             </div>
 

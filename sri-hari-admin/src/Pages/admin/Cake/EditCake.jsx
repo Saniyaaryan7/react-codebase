@@ -18,7 +18,7 @@ export default function EditCake() {
     price: 768,
     strike: 876,
     status: "Active",
-    image: "https://i.imgur.com/8Km9tLL.jpg",
+    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=1050&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   });
 
   const handleChange = (e) => {
@@ -71,7 +71,7 @@ export default function EditCake() {
                   name="cakeId"
                   value={formData.cakeId}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border rounded-md px-4 py-2 bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -85,7 +85,7 @@ export default function EditCake() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border rounded-md px-4 py-2 bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -99,7 +99,7 @@ export default function EditCake() {
                   name="superCategory"
                   value={formData.superCategory}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm"
+                  className="w-full border rounded-md px-4 py-2 text-sm bg-white text-gray-800"
                 />
               </div>
 
@@ -113,7 +113,7 @@ export default function EditCake() {
                   name="category"
                   value={formData.category}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm"
+                  className="w-full border rounded-md px-4 py-2 text-sm bg-white text-gray-800"
                 />
               </div>
 
@@ -127,7 +127,7 @@ export default function EditCake() {
                   name="price"
                   value={formData.price}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm
+                  className="w-full border rounded-md px-4 py-2 text-sm bg-white text-gray-800
                              [&::-webkit-inner-spin-button]:opacity-100"
                 />
               </div>
@@ -142,7 +142,7 @@ export default function EditCake() {
                   name="strike"
                   value={formData.strike}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm
+                  className="w-full border rounded-md px-4 py-2 text-sm bg-white text-gray-800
                              [&::-webkit-inner-spin-button]:opacity-100"
                 />
               </div>
@@ -156,7 +156,7 @@ export default function EditCake() {
                 />
 
                 <div className="flex border rounded-md overflow-hidden">
-                  <label className="px-4 py-2 bg-gray-100 text-sm cursor-pointer border-r">
+                  <label className="px-4 py-2 bg-gray-100 text-sm text-gray-800 cursor-pointer border-r">
                     Choose File
                     <input
                       type="file"
@@ -179,7 +179,7 @@ export default function EditCake() {
                   name="status"
                   value={formData.status}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm"
+                  className="w-full border rounded-md px-4 py-2 text-sm bg-white text-gray-800"
                 >
                   <option>Active</option>
                   <option>Inactive</option>
