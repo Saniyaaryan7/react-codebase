@@ -25,6 +25,7 @@ function AddSuperCategory() {
 
         <main className="flex-1 overflow-y-auto p-6">
           <div className="bg-gray-50 p-6 rounded-xl text-black">
+
             {/* PAGE HEADER */}
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-xl font-semibold uppercase">
@@ -51,7 +52,9 @@ function AddSuperCategory() {
                   <input
                     type="text"
                     placeholder="Category Name"
-                    className="w-full border rounded-lg px-4 py-2 text-sm bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full border rounded-lg px-4 py-2 
+                               text-sm bg-white
+                               focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   />
                 </div>
 
@@ -79,7 +82,8 @@ function AddSuperCategory() {
 
               {/* SAVE BUTTON */}
               <div className="mt-6">
-                <button className="bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-6 py-2 rounded-lg text-sm">
+                <button className="bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)]
+                                   text-white px-6 py-2 rounded-lg text-sm">
                   Save Changes
                 </button>
               </div>

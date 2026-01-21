@@ -59,12 +59,13 @@ export default function SuperCategory() {
 
             <button
   onClick={() => navigate("/admin/add-super-category")}
-  className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-5 py-2 rounded-full text-sm font-medium"
+  className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] 
+          text-white text-sm font-medium
+           px-5 py-2 rounded-full "
 >
   <Plus size={18} />
   New Super Category
 </button>
-
           </div>
 
           {/* Card */}
@@ -76,7 +77,9 @@ export default function SuperCategory() {
                 placeholder="Search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="border rounded-lg px-4 py-2 text-sm bg-white focus:ring-2 focus:ring-[#1F4E5F] focus:outline-none"
+                className="border rounded-lg px-4 py-2 
+                           text-sm bg-white
+                           focus:ring-2 focus:ring-[#1F4E5F] focus:outline-none"
               />
             </div>
 
@@ -111,7 +114,8 @@ export default function SuperCategory() {
                       </td>
 
                       <td className="py-4 px-4">
-                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">
+                        <span className="px-3 py-1 rounded-full 
+                        text-xs font-medium bg-green-100 text-green-700">
                           {item.status}
                         </span>
                       </td>
@@ -119,16 +123,16 @@ export default function SuperCategory() {
                       <td className="py-4 px-4">
                         <div className="flex items-center gap-3">
                           {/* ==========================Edit ================================*/}
-                          <button
-                               type="button"
-                               className="bg-transparent p-1 rounded-full
-                                          text-emerald-500 hover:text-emerald-700
-                                          hover:bg-emerald-50
-                                          focus:outline-none focus:ring-0"
-                               title="Edit"
-                             >
-                               <Pencil size={18} />
-                             </button>
+                            <button
+                            type="button"
+                            title="Edit"
+                            onClick={() => navigate(`/admin/superCategory/edit/${item.id}`)}
+                            className="bg-transparent p-1 rounded-full
+                                       text-emerald-500 hover:text-emerald-700
+                                       hover:bg-emerald-50"
+                          >
+                            <Pencil size={18} />
+                          </button>
                          
                              {/* ================================ Delete =========================================*/}
                              <button

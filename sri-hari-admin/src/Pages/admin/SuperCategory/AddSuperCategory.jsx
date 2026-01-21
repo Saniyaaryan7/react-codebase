@@ -43,7 +43,7 @@ function AddSuperCategory() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* NAME */}
+                {/* SUPER CATEGORY NAME  */}
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     Super Category Name
@@ -51,7 +51,9 @@ function AddSuperCategory() {
                   <input
                     type="text"
                     placeholder="Super Category Name"
-                    className="w-full border rounded-lg px-4 py-2 text-sm bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full border rounded-lg px-4 py-2 
+                               text-sm bg-white 
+                               focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   />
                 </div>
 
@@ -79,7 +81,8 @@ function AddSuperCategory() {
 
               {/* SAVE BUTTON */}
               <div className="mt-6">
-                <button className="bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-6 py-2 rounded-lg text-sm">
+                <button className="bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)]
+                                   text-white px-6 py-2 rounded-lg text-sm">
                   Save Changes
                 </button>
               </div>

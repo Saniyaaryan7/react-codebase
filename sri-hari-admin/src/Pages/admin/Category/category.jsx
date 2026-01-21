@@ -63,20 +63,22 @@ export default function Category() {
         <Topbar toggle={() => setOpen(true)} />
 
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-2xl font-semibold text-[#4B2E39]">
               CATEGORY
             </h1>
 
-           
-           <button
-             onClick={() => navigate("/admin/add-category")}
-             className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-5 py-2 rounded-full text-sm font-medium"
-           >
-             <Plus size={18} />
-             New  Category
-           </button>
+
+            <button
+              onClick={() => navigate("/admin/add-category")}
+              className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)]
+                       text-white px-5 py-2 rounded-full text-sm font-medium"
+            >
+              <Plus size={18} />
+              New  Category
+            </button>
           </div>
 
           {/* Card */}
@@ -139,36 +141,36 @@ export default function Category() {
                         </span>
                       </td>
 
-                     <td className="py-4 px-4">
-                             <div className="flex items-center gap-3">
-                           {/* ==========================Edit ================================*/}
-                                 <button
-                                  type="button"
-                                  title="Edit"
-                                  onClick={() => navigate(`/admin/category/edit/${item.id}`)}
-                                  className="bg-transparent p-1 rounded-full
+                      <td className="py-4 px-4">
+                        <div className="flex items-center gap-3">
+                          {/* ==========================Edit ================================*/}
+                          <button
+                            type="button"
+                            title="Edit"
+                            onClick={() => navigate(`/admin/category/edit/${item.id}`)}
+                            className="bg-transparent p-1 rounded-full
                                              text-emerald-500 hover:text-emerald-700
                                              hover:bg-emerald-50"
-                                >
-                                  <Pencil size={18} />
-                                </button>
-                                              
-                                                  {/* ================================ Delete =========================================*/}
-                                   <button
-                                        type="button"
-                                        title="Delete"
-                                        onClick={() => handleDelete(cake.name)}
-                                        className="
+                          >
+                            <Pencil size={18} />
+                          </button>
+
+                          {/* ================================ Delete =========================================*/}
+                          <button
+                            type="button"
+                            title="Delete"
+                            onClick={() => handleDelete(cake.name)}
+                            className="
                                                   bg-transparent p-1 rounded-full
                                                  text-red-500 hover:text-red-700
                                                  hover:bg-red-50
                                                    focus:outline-none focus:ring-0
                                                     "
-                                                  >
-                                                    <Trash2 size={16} />
-                                                  </button>
-                                             </div>
-                                           </td>
+                          >
+                            <Trash2 size={16} />
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

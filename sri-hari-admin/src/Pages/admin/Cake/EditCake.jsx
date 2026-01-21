@@ -71,7 +71,9 @@ export default function EditCake() {
                   name="cakeId"
                   value={formData.cakeId}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border rounded-md px-4 py-2 
+                           bg-white text-gray-800 text-sm 
+                             focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -85,7 +87,9 @@ export default function EditCake() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border rounded-md px-4 py-2 
+                           bg-white text-gray-800 text-sm 
+                             focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -142,7 +146,8 @@ export default function EditCake() {
                   name="strike"
                   value={formData.strike}
                   onChange={handleChange}
-                  className="w-full border rounded-md px-4 py-2 text-sm bg-white text-gray-800
+                  className="w-full border rounded-md px-4 py-2
+                             text-sm bg-white text-gray-800
                              [&::-webkit-inner-spin-button]:opacity-100"
                 />
               </div>
@@ -156,7 +161,9 @@ export default function EditCake() {
                 />
 
                 <div className="flex border rounded-md overflow-hidden">
-                  <label className="px-4 py-2 bg-gray-100 text-sm text-gray-800 cursor-pointer border-r">
+                  <label className="px-4 py-2
+                                  bg-gray-100 text-sm text-gray-800 
+                                    cursor-pointer border-r">
                     Choose File
                     <input
                       type="file"

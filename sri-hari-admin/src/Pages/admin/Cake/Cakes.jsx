@@ -78,7 +78,8 @@ export default function Cakes() {
             </h1>
 <button
   onClick={() => navigate("/admin/cakes/add")}
-  className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)] text-white px-4 py-2 rounded-full font-medium"
+  className="flex items-center gap-2 bg-[rgb(53,111,132)] hover:bg-[rgb(25,79,99)]
+           text-white px-4 py-2 rounded-full font-medium"
 >
   <Plus size={18} />
   Add New Cake
@@ -96,7 +97,9 @@ export default function Cakes() {
                 placeholder="Search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="border rounded-lg px-4 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1F4E5F]"
+                className="border rounded-lg px-4 py-2 
+                           text-sm bg-white
+                           focus:outline-none focus:ring-2 focus:ring-[#1F4E5F]"
               />
             </div>
 
@@ -155,10 +158,10 @@ export default function Cakes() {
     
     {/* =================================  Edit  =========================== */}
     <button
-  type="button"
-  title="Edit"
-  onClick={() => navigate(`/admin/cakes/edit/${cake.id}`)}
-  className="bg-transparent p-1 rounded-full
+      type="button"
+      title="Edit"
+      onClick={() => navigate(`/admin/cakes/edit/${cake.id}`)}
+      className="bg-transparent p-1 rounded-full
              text-emerald-500 hover:text-emerald-700
              hover:bg-emerald-50"
 >

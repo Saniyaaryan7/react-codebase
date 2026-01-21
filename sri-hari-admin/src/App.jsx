@@ -8,10 +8,11 @@ import EditCake from "./Pages/admin/Cake/EditCake"
 ;
 import SuperCategory from "./Pages/admin/SuperCategory/superCategory";
 import AddSuperCategory from "./Pages/admin/SuperCategory/AddSuperCategory";
-import EditCategory from "./Pages/admin/Category/EditCategory";
+import EditSuper from "./Pages/admin/SuperCategory/EditSuper";
 
 import Category from "./Pages/admin/Category/category";
 import AddCategory from "./Pages/admin/Category/AddCategory";
+import EditCategory from "./Pages/admin/Category/EditCategory";
 
 function App() {
   return (
@@ -25,12 +26,12 @@ function App() {
       <Route path="/admin/cakes/edit/:id" element={<EditCake />} />
 
       <Route path="/admin/super-category" element={<SuperCategory />} />
-    <Route path="/admin/add-super-category" element={<AddSuperCategory />} />
-    <Route path="/admin/category/edit/:id" element={<EditCategory />} />
+      <Route path="/admin/add-super-category" element={<AddSuperCategory />} />
+      <Route path="/admin/superCategory/edit/:id" element={<EditSuper />} />
 
-
-    <Route path="/admin/category" element={<Category />} />
-<Route path="/admin/add-category" element={<AddCategory />} />
+      <Route path="/admin/category" element={<Category />} />
+      <Route path="/admin/add-category" element={<AddCategory />} />
+      <Route path="/admin/category/edit/:id" element={<EditCategory />} />
 
     </Routes>
     </BrowserRouter>
