@@ -9,12 +9,6 @@ import magic from "../assets/images/special-img/magic.avif";
 function Specialist() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleScroll = (e) => {
-    const scrollLeft = e.target.scrollLeft;
-    const width = e.target.offsetWidth;
-    setActiveIndex(Math.round(scrollLeft / width));
-  };
-
   const items = [
     {
       img: cakeImage,
@@ -33,17 +27,24 @@ function Specialist() {
     },
   ];
 
+  const handleScroll = (e) => {
+    const scrollLeft = e.target.scrollLeft;
+    const width = e.target.offsetWidth;
+    setActiveIndex(Math.round(scrollLeft / width));
+  };
+
   return (
     <>
       {/* ================= OUR SPECIALITIES ================= */}
       <section
         className="
-          relative py-16 overflow-hidden
-          bg-gradient-to-br from-[#4b2e1e] via-[#8b5e3c] to-[#f3e5d0]
+          relative
+          w-screen
+          py-16
+           bg-gradient-to-br from-[#4b2e1e] via-[#8b5e3c] to-[#f3e5d0]
         "
       >
-        {/* overlay */}
-        <div className="absolute inset-0 bg-white-100/30 backdrop-blur-sm"></div>
+        
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
@@ -56,13 +57,7 @@ function Specialist() {
             {items.map((item, index) => (
               <Link to={item.link} key={index}>
                 <div className="flex flex-col items-center cursor-pointer hover:scale-105 transition">
-                  <div
-                    className="
-                      w-40 h-40
-                      rounded-full border-4 border-teal-400
-                      flex items-center justify-center bg-white
-                    "
-                  >
+                  <div className="w-40 h-40 rounded-full border-4 border-teal-400 flex items-center justify-center bg-white">
                     <img
                       src={item.img}
                       alt={item.title}
@@ -125,22 +120,24 @@ function Specialist() {
 </div>
           {/* ================= DOT INDICATORS ================= */}
           <div className="md:hidden flex justify-center items-center gap-2 mt-4 ">
-            {items.map((_, index) => (
-              <span
-                key={index}
-                className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                  activeIndex === index
-                    ? "bg-black w-4"
-                    : "bg-gray-300"
-                }`}
-              ></span>
-            ))}
+           {items.map((_, index) => (
+  <span
+    key={index}
+    className={`h-2 w-2 rounded-full transition-all duration-300 ${
+      activeIndex === index ? "bg-black w-4" : "bg-gray-300"
+    }`}
+  ></span>
+))}
+
+
+         
+            
           </div>
         </div>
       </section>
 
       {/* ================= MAGIC PROCESS ================= */}
-      <div className="relative w-full overflow-hidden">
+      <section className="relative w-screen">
         <img
           src={magic}
           alt="Cake Magic Process"
@@ -165,7 +162,7 @@ function Specialist() {
             clipPath:
               "polygon(0 100%, 5% 70%, 10% 100%, 15% 70%, 20% 100%, 25% 70%, 30% 100%, 35% 70%, 40% 100%, 45% 70%, 50% 100%, 55% 70%, 60% 100%, 65% 70%, 70% 100%, 75% 70%, 80% 100%, 85% 70%, 90% 100%, 95% 70%, 100% 100%)",
           }}
-        ></div>
+        />
 
         {/* Bottom Wave */}
         <div
@@ -174,8 +171,8 @@ function Specialist() {
             clipPath:
               "polygon(0 0, 5% 30%, 10% 0, 15% 30%, 20% 0, 25% 30%, 30% 0, 35% 30%, 40% 0, 45% 30%, 50% 0, 55% 30%, 60% 0, 65% 30%, 70% 0, 75% 30%, 80% 0, 85% 30%, 90% 0, 95% 30%, 100% 0)",
           }}
-        ></div>
-      </div>
+        />
+      </section>
     </>
   );
 }

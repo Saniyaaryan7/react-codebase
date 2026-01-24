@@ -3,9 +3,8 @@ import slide1 from "../assets/images/Hero-img/01_slide.jpg";
 import slide2 from "../assets/images/Hero-img/slide1.jpg";
 import slide3 from "../assets/images/Hero-img/slide4.jpg";
 
-
 const slides = [
-  { id: 1,image: slide1  },
+  { id: 1, image: slide1 },
   { id: 2, image: slide2 },
   { id: 3, image: slide3 },
 ];
@@ -24,36 +23,36 @@ function Hero() {
   }, []);
 
   return (
-    // navbar height = h-16 → mt-16
-    <section className="relative overflow-hidden mt-20">
-
-      {/*-------------- SLIDER------------------ */}
+    <section
+      className="
+        relative
+        w-screen
+        overflow-hidden
+        pt-16
+        h-[45vh]
+        sm:h-[55vh]
+        md:h-[70vh]
+        lg:h-[85vh]
+        xl:h-screen
+      "
+    >
+      {/* SLIDER */}
       <div
-        className="flex transition-transform duration-[2000ms] ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        className="grid grid-flow-col h-full transition-transform duration-[2000ms] ease-in-out"
+        style={{
+          transform: `translateX(-${currentIndex * 100}vw)`,
+        }}
       >
         {slides.map((slide) => (
-  <div
-  key={slide.id}
-
-  // HERO HEIGHT -- Mobile: 45vh | Tablet: 50vh | Desktop: 65vh
-  className="      
-    min-w-full
-     h-[45vh] sm:h-[50vh] md:h-[65vh]
-    bg-no-repeat
-    bg-center
-    bg-cover
-    relative
-  "
-  style={{
-    backgroundImage: `url(${slide.image})`,
-  }}
->
-
-   
-  </div>
-))}
-
+          <div
+            key={slide.id}
+            className="w-screen h-full bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: `url(${slide.image})`,
+              backgroundPosition: "50% 35%",
+            }}
+          />
+        ))}
       </div>
     </section>
   );
