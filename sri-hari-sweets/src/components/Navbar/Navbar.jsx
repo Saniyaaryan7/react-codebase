@@ -37,9 +37,12 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-6 ml-auto">
           <NavLink
             to="/shop"
-            className="flex items-center gap-2 px-4 py-2 rounded-full
-                       text-black hover:bg-red-600 hover:text-white
-                       transition shadow-md"
+            className="flex items-center gap-2
+             px-4 py-2
+             font-semibold tracking-wide
+             rounded-full
+             text-black hover:bg-red-600 hover:text-white
+             transition-all duration-300 shadow-md"
           >
             <img src={shopIcon} alt="Shop" className="w-5 h-5" />
             <span>Shop</span>
@@ -49,8 +52,9 @@ function Navbar() {
             <input
               type="text"
               placeholder="Search cakes..."
-              className="w-48 px-4 py-2 pr-10 rounded-full border border-gray-200
-                         focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm"
+              className="w-48 px-4 py-2 pr-10 rounded-full border border-gray-600
+                          placeholder-gray-700
+                         focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm "
             />
             <img
               src={searchIcon}
@@ -93,18 +97,41 @@ function Navbar() {
       </div>
 
       {/* ================= MOBILE SEARCH BAR ================= */}
-      <div className="md:hidden px-4 pb-3 bg-white">
-        <div className="flex items-center rounded-xl border overflow-hidden shadow-sm">
-          <input
-            type="text"
-            placeholder="Search cakes..."
-            className="flex-1 px-4 py-2 text-sm outline-none"
-          />
-          <button className="bg-red-600 px-4 py-2">
-            <img src={searchIcon} alt="Search" className="w-4 h-4 invert" />
-          </button>
-        </div>
-      </div>
+    <div className="md:hidden px-4 pb-3 bg-white">
+  <div
+    className="flex items-center
+               h-10
+               border border-gray-700
+               rounded-xl
+               overflow-hidden
+                focus-within:ring-2
+               focus-within:ring-gray-300"
+  >
+    <input
+      type="text"
+      placeholder="Search cakes..."
+      className="flex-1 h-full px-4 text-sm
+                 outline-none
+                 placeholder-gray-700"
+    />
+
+    <button
+      className="h-full px-4
+                 bg-red-600
+                 flex items-center justify-center
+                 rounded-r-xl"
+    >
+      <img
+        src={searchIcon}
+        alt="Search"
+        className="w-4 h-4 invert"
+      />
+    </button>
+  </div>
+</div>
+
+
+
 
       {/* ================= MOBILE SLIDE MENU ================= */}
       <div
