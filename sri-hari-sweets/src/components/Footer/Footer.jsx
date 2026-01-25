@@ -42,7 +42,12 @@ function Footer() {
               </p>
 
               <p className="mt-4 text-sm text-gray-300">
-                📞 (305) 333-5522 <br />
+                📞 (305) 333-5522 
+               
+              </p>
+
+              <p className="mt-2 text-sm text-gray-300">
+                
                 ✉️ info@your-site.com
               </p>
 
