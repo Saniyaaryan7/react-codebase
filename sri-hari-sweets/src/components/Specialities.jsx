@@ -38,17 +38,18 @@ function Specialist() {
       {/* ================= OUR SPECIALITIES ================= */}
       <section
         className="
-          relative
-          w-screen
-          py-16
-           bg-gradient-to-br from-[#4b2e1e] via-[#8b5e3c] to-[#f3e5d0]
+          relative w-screen
+          py-10 md:py-16
+          bg-gradient-to-br from-[#4b2e1e] via-[#8b5e3c] to-[#f3e5d0]
         "
       >
-        
+
+ {/* Overlay */}
+  <div className="absolute inset-0 bg-black/20 md:bg-black/10"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-serif font-bold text-white mb-12">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-12">
             Our Specialities
           </h2>
 
@@ -73,65 +74,60 @@ function Specialist() {
           </div>
 
           {/* ================= MOBILE SLIDER ================= */}
-          <div className="md:hidden overflow-hidden relative isolate bg-transparent">
-          <div
-  onScroll={handleScroll}
-  className="
-    md:hidden flex gap-6
-    overflow-x-auto snap-x snap-mandatory
-    scrollbar-hide   overscroll-x-contain
-      touch-pan-x
-  "
->
-  {/* LEFT SPACER */}
-  <div className="flex-shrink-0 w-[7.5%]"></div>
+          <div className="md:hidden overflow-hidden relative isolate">
+            <div
+              onScroll={handleScroll}
+              className="
+                flex gap-6
+                overflow-x-auto snap-x snap-mandatory
+                scrollbar-hide overscroll-x-contain touch-pan-x
+              "
+            >
+              {/* LEFT SPACER */}
+              <div className="flex-shrink-0 w-[7.5%]" />
 
-  {items.map((item, index) => (
-    <Link
-      key={index}
-      to={item.link}
-      className="min-w-[85%] snap-center flex justify-center"
-    >
-      <div className="flex flex-col items-center">
-        <div
-          className="
-            w-48 h-48
-            rounded-full border-4 border-teal-400
-            flex items-center justify-center bg-white
-          "
-        >
-          <img
-            src={item.img}
-            alt={item.title}
-            className="w-36 h-36 object-cover rounded-full"
-          />
-        </div>
-        <h3 className="mt-4 text-xl font-bold text-black">
-          {item.title}
-        </h3>
-      </div>
-    </Link>
-  ))}
+              {items.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.link}
+                  className="min-w-[85%] snap-center flex justify-center"
+                >
+                  <div className="flex flex-col items-center">
+                    <div
+                      className="
+                        w-40 h-40
+                        rounded-full border-4 border-teal-400
+                        flex items-center justify-center bg-white
+                      "
+                    >
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="w-28 h-28 object-cover rounded-full"
+                      />
+                    </div>
+                    <h3 className="mt-3 text-lg font-bold text-black">
+                      {item.title}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
 
-  {/* RIGHT SPACER */}
-  <div className="flex-shrink-0 w-[7.5%]"></div>
-</div>
+              {/* RIGHT SPACER */}
+              <div className="flex-shrink-0 w-[7.5%]" />
+            </div>
+          </div>
 
-</div>
           {/* ================= DOT INDICATORS ================= */}
-          <div className="md:hidden flex justify-center items-center gap-2 mt-4 ">
-           {items.map((_, index) => (
-  <span
-    key={index}
-    className={`h-2 w-2 rounded-full transition-all duration-300 ${
-      activeIndex === index ? "bg-black w-4" : "bg-gray-300"
-    }`}
-  ></span>
-))}
-
-
-         
-            
+          <div className="md:hidden flex justify-center items-center gap-2 mt-2">
+            {items.map((_, index) => (
+              <span
+                key={index}
+                className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                  activeIndex === index ? "bg-black w-4" : "bg-gray-300"
+                }`}
+              ></span>
+            ))}
           </div>
         </div>
       </section>
@@ -141,7 +137,7 @@ function Specialist() {
         <img
           src={magic}
           alt="Cake Magic Process"
-          className="w-full h-[35vh] md:h-[50vh] object-cover"
+          className="w-full h-[30vh] md:h-[50vh] object-cover"
         />
 
         <div className="absolute inset-0 bg-black/30"></div>
