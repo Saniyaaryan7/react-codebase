@@ -1,7 +1,7 @@
 import Cake_bg from "../assets/images/About-img/about-bg.jpg";
 import storycake from "../assets/images/Hero-img/slide1.jpg";
 import ourMission from "../assets/images/About-img/ourMission.jpg";
-import valuesCard from "../assets/images/About-img/valuesCard.avif";
+import Banner from "../assets/images/Contact-img/contact-bg.jpg";
 
 
 export default function About() {
@@ -9,20 +9,32 @@ export default function About() {
     <div className="w-full overflow-hidden">
 
       {/* ===== TOP BANNER ===== */}
-      <section className="relative w-full h-[45vh] md:h-[45vh]">
-        <img
-          src="https://plus.unsplash.com/premium_photo-1664472607092-2f28b4b14b55?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Bakery Banner"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mt-8">About Us</h1>
-          <p className="mt-2 text-sm md:text-base font-serif font-medium">Sri Hari Sweets is a celebration of taste, tradition, and quality.</p>
-        </div>
-      </section>
+    <section className="relative w-full h-[45vh] md:h-[60vh] overflow-hidden">
+  <img
+    src={Banner}
+    alt="Bakery Banner"
+    className="w-full h-full object-cover"
+  />
 
-      {/* ===== OUR STORY ===== */}
-      <section className="relative py-20">
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-white/50" />
+
+  {/* Content */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4
+                  translate-y-10 sm:translate-y-14 md:translate-y-0">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-red-600">
+      ABOUT US
+    </h1>
+    <p className="mt-3 text-sm md:text-base text-amber-700 font-serif font-medium max-w-md">
+      Sri Hari Sweets is a celebration of taste, tradition, and quality.
+    </p>
+  </div>
+</section>
+
+
+
+      {/* ==================== OUR STORY ======================= */}
+      <section className="relative py-20 ">
   {/* Background Image */}
   <img
     src={Cake_bg}
@@ -31,13 +43,14 @@ export default function About() {
   />
 
   {/* Overlay */}
-  <div className="absolute inset-0 bg-white/80"></div>
+  <div className="absolute inset-0 bg-gray-100"></div>
 
   {/* Content */}
   <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     
-    <div>
-      <h2 className="text-4xl text-pink-700 font-bold mb-4">Our Story</h2>
+   <div className="bg-white backdrop-blur p-8 rounded-2xl shadow-lg">
+
+      <h2 className="text-4xl text-amber-700 font-bold mb-4">Our Story</h2>
       <p className="text-black leading-relaxed">
         Sri Hari Sweets was born from a simple dream — to spread happiness
         through handcrafted sweets and cakes. What started as a small home
@@ -50,62 +63,83 @@ export default function About() {
       </p>
     </div>
 
+ <div className="overflow-hidden rounded-2xl shadow">
     <img
       src={storycake}
       alt="Our Cakes"
-      className="rounded-xl shadow-lg"
+      className="w-full h-full object-cover hover:scale-105 transition"
     />
+    </div>
   </div>
 </section>
 
       {/* ===== OUR MISSION ===== */}
-      <section className="relative py-20">
-        <img
-          src={ourMission}
-          alt="Baking Process"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-pink-500/80"></div>
-
-        <div className="relative max-w-5xl mx-auto text-center px-6 text-white">
-          <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
-          <p className="leading-relaxed">
-            Our mission is to craft fresh, delicious, and visually delightful
-            sweets using the finest ingredients. We focus on quality, hygiene,
-            and consistency while keeping authentic flavors alive for every
-            generation.
-          </p>
-        </div>
-      </section>
-
-      {/* ======================== VALUES ========================= */}
-     <section className="relative py-24">
+     <section className="relative py-24 overflow-hidden">
   {/* Background Image */}
   <img
-    src={Cake_bg}   
+    src={ourMission}
+    alt="Baking Process"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Gradient Overlay  */}
+  <div className="absolute inset-0 bg-gradient-to-r 
+                  from-pink-600/85 via-pink-500/75 to-pink-600/85">
+  </div>
+
+  
+  <div className="absolute inset-0 bg-black/20"></div>
+
+  {/* Content */}
+  <div className="relative max-w-4xl mx-auto text-center px-6">
+    <h2 className="text-3xl md:text-4xl font-bold tracking-wide mb-6">
+      Our Mission
+    </h2>
+
+    {/* divider */}
+    <div className="w-16 h-[2px] bg-[#E6B873] mx-auto mb-6"></div>
+
+    <p className="text-base md:text-lg leading-relaxed text-white/95">
+      Our mission is to craft fresh, delicious, and visually delightful sweets
+      using the finest ingredients. We focus on quality, hygiene, and
+      consistency while keeping authentic flavors alive for every generation.
+    </p>
+  </div>
+</section>
+
+      {/* ======================== VALUES ========================= */}
+    <section className="relative py-28 overflow-hidden">
+  {/* Background Image */}
+  <img
+    src={Cake_bg}
     alt="Our Bakery"
     className="absolute inset-0 w-full h-full object-cover"
   />
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/50"></div>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b 
+                  from-black/70 via-black/55 to-black/70"></div>
 
   {/* Content */}
-  <div className="relative max-w-7xl mx-auto px-6 text-center text-white space-y-16">
+  <div className="relative max-w-7xl mx-auto px-6 text-center text-white">
 
     {/* OUR BAKERY TEXT */}
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+    <div className="max-w-3xl mx-auto mb-20">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-wide mb-4">
         Our Bakery
       </h2>
-      <p className="leading-relaxed text-gray-200">
+
+      {/* divider */}
+      <div className="w-16 h-[2px] bg-[#E6B873] mx-auto mb-6"></div>
+
+      <p className="leading-relaxed text-gray-200 text-base md:text-lg">
         Inside our bakery, every cake is prepared with patience and precision.
         From mixing to baking and decorating, each step reflects our commitment
         to excellence and taste.
       </p>
     </div>
 
-    {/* VALUES / CARDS */}
+    {/* VALUES : CARDS */}
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
       {[
         {
@@ -127,16 +161,23 @@ export default function About() {
       ].map((item, i) => (
         <div
           key={i}
-          className="p-6 rounded-2xl bg-white/90 backdrop-blur text-pink-700 shadow-md hover:shadow-xl transition"
+          className="p-7 rounded-2xl bg-[#FAFAFA] text-gray-800
+                     shadow-lg hover:-translate-y-1 hover:shadow-2xl
+                     transition-all duration-300"
         >
-          <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-          <p className="text-gray-600 text-sm">{item.text}</p>
+          <h3 className="text-xl font-semibold mb-3 text-amber-700">
+            {item.title}
+          </h3>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            {item.text}
+          </p>
         </div>
       ))}
     </div>
 
   </div>
 </section>
+
 
 
     </div>
